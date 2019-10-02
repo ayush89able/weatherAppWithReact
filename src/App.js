@@ -26,7 +26,7 @@ class App extends React.Component{
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
     console.log(data);
-    if(city === true && country === true)
+    if(city && country)
     {
     this.setState({
       temperature: data.main.temp,
@@ -36,6 +36,9 @@ class App extends React.Component{
       description: data.weather[0].description,
       error: ""
     })
+    }else
+    {
+      this.setState({error:"Please enter city and country"})
     }
   }
   render(){

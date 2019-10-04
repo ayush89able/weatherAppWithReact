@@ -1,0 +1,23 @@
+.container{
+    margin:0 ;
+    max-width: 1500px;
+}
+
+.colOne{
+    background-image: url("./bgpic.jpeg");
+    background-size: cover;
+    height: 41em;
+    line-height: 41em;
+}
+
+.colTwo{
+    height: 41em;
+    background-color: snow;
+}
+
+.card{
+    width: 50%;
+    margin:auto;
+    border-radius: 5px; 
+    margin-top: 5em;
+}

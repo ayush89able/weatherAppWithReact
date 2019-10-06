@@ -36,7 +36,7 @@ constructor(props)
     console.log(city);
     const country = e.target.elements.country.value;
     console.log(country);
-    const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
     console.log(data);
     this.Sunrise(data.sys.sunrise);
